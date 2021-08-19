@@ -71,7 +71,6 @@ async function aivenProducer(kafka) {
  * consumes messages using kafka-socks and emits them to the websocket
  */
 async function aivenConsumer(kafka) {
-  let messageCount = 0;
   const consumer = kafka.consumer({
     groupId: 'Kafka-Socks-Group',
   });
