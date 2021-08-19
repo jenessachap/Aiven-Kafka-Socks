@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aiven Kafka with Kafka-Socks</h1>
+    <br>
+    <p>Proof of Concept</p>
+    <div>
+        <ul id="proofpass"></ul>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        let socketEvent = io('/proof') //connection to Subject 
+        socketEvent.on('Kafka-Socks-Event', function(message){
+            const line = document.createElement('li')
+            console.log(message)
+            line.textContent = message;
+            proofpass.appendChild(line)
+        })
+    </script>
+</body>
+</html>
