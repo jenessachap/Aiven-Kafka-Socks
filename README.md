@@ -15,7 +15,7 @@
 
 <h2> To get started</h2>
 1. Create a new Service in the Aiven Console, and choose Kafka as the service type. https://console.aiven.io/ <br>
-2. Select the options for the desired cloud provider, region, service plan, and service name.<br>
+2. Select the options for the desired cloud provider, region, service plan, and service name.(you'll get a $300 credit to play with)<br>
 3. Once the service is being created you will see the status set to "Rebuilding". Once that status changes to "Running" the service is ready to use. <br>
 4. From the Overview tab, download the three authentication files and place them in the project directory. You will use these files for easy fast setup.<br>
 5. Install the dependencies <br>
