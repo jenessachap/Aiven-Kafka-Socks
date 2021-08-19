@@ -155,8 +155,10 @@ ServiceURI=<<service-uri>> node main.js
 
 <h2> Results </h2>
 You should be able to see your events on localhost:3000
-  
-![doesitwork?](https://user-images.githubusercontent.com/39535579/130133385-662d5bb4-9b3b-415d-9c88-74c4359058f9.png)
-  
-![yesitdoes!](https://user-images.githubusercontent.com/39535579/130133397-74a1c027-5ac1-49ec-8e53-562d7c1f399e.png)
+<p align="center">
 
+<img src="https://user-images.githubusercontent.com/39535579/130133385-662d5bb4-9b3b-415d-9c88-74c4359058f9.png" width="480" height="250"/>
+  
+<img src="https://user-images.githubusercontent.com/39535579/130133397-74a1c027-5ac1-49ec-8e53-562d7c1f399e.png" width="480" height="250"/>
+
+</p>
