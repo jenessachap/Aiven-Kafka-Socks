@@ -6,12 +6,15 @@
 <p> Kafka Socks is an easy-to-use and lightweight framework that combines Kafka consumer functionality with WebSockets to pipe the Kafka messages directly to the frontend client, in realtime.</p>
 
 <h2> To get started</h2>
-1. Create a new Service in the Aiven Console, and choose Kafka as the service type. https://console.aiven.io/
-2. Select the options for the desired cloud provider, region, service plan, and service name.
-3. Once the service is being created you will see the status set to "rebuilding". Once that status changes to "Running" the service is ready to use. 
-4. From the Overview tab, download the three authentication files and place them in the project directory. You will use these files for easy fast setup.
-5. Install the dependencies
+1. Create a new Service in the Aiven Console, and choose Kafka as the service type. https://console.aiven.io/ <br>
+2. Select the options for the desired cloud provider, region, service plan, and service name.<br>
+3. Once the service is being created you will see the status set to "rebuilding". Once that status changes to "Running" the service is ready to use. <br>
+4. From the Overview tab, download the three authentication files and place them in the project directory. You will use these files for easy fast setup.<br>
+5. Install the dependencies <br>
+
+
 `npm install kafka-socks express kafkajs socket.io`
+
 
 Require them in as well
 ``` javascript
@@ -26,7 +29,9 @@ const server = http.createServer(app);
 
 const { Server } = require("socket.io");
 const io = new Server(server);
+
 ```
+
 
 6. Instantiate Aiven Kafka and choose a Topic name. Also add this Topic to the Aiven service under the Topics tab.
 ```javascript
@@ -39,7 +44,11 @@ if (!MASTER_BROKER) {
 const key = fs.readFileSync('./service.key');
 const cert = fs.readFileSync('./service.cert');
 const ca = fs.readFileSync('./ca.pem');
+
 ```
+![addtopic](https://user-images.githubusercontent.com/39535579/130133115-fa541187-b58d-48a3-b949-784fefe60936.png)
+
+
 
 7. Set up a KafkaJS producer
 ```javascript
@@ -56,7 +65,9 @@ async function aivenProducer(kafka) {
   });
   await producer.disconnect();
 }
+
 ```
+
 
 8. Set up a Kafka-Socks consumer and websocket
 ```javascript
@@ -71,7 +82,10 @@ async function aivenConsumer(kafka) {
   await proofSubject.connect()
   await consumer.disconnect();
 }
+
 ```
+
+
 9. Call all the functions in order
 ```javascript
 async function aivenKafka() {
@@ -81,7 +95,9 @@ async function aivenKafka() {
 }
 
 aivenKafka();
+
 ```
+
 
 10. Finally add a websocket listener to the client to deliver the events.
 ```javascript
@@ -103,7 +119,9 @@ aivenKafka();
         })
     </script>
 </body>
+
 ```
+
 
 Dont forget to serve the file
 ```javascript
@@ -114,13 +132,23 @@ app.get('/', (req, res) => {
 server.listen(3000, () => {
   console.log('listening on *:3000');
 });
+
 ```
 
 <h2>To Run</h2>
 To run the project you will need the ServiceURI from the Aiven Serivce Overview tab. Edit the following command to include the Service URI 
-ex:         
+ex:
+
 `ServiceURI=aiven-kafka-socks-jenessa-e445.aivencloud.com:10158 node main.js`
+
+```javascript
 ServiceURI=<<service-uri>> node main.js
+```
 
 <h2> Results </h2>
 You should be able to see your events on localhost:3000
+  
+![doesitwork?](https://user-images.githubusercontent.com/39535579/130133385-662d5bb4-9b3b-415d-9c88-74c4359058f9.png)
+  
+![yesitdoes!](https://user-images.githubusercontent.com/39535579/130133397-74a1c027-5ac1-49ec-8e53-562d7c1f399e.png)
+
