@@ -1,5 +1,13 @@
 <h1 align ="center">Aiven-Kafka-Socks</h1>
 <p align="center">A quickstart guide to set up Aiven Kafka with Kafka-Socks</p>
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/39535579/130137264-6b9a3bd1-d22e-4dbc-890b-8f5b91b8888e.jpeg" width="225" height="225" />
+  <img width="225" height="225" alt="Screen Shot 2021-06-21 at 8 14 57 PM" src="https://user-images.githubusercontent.com/39535579/130138198-a1cee03d-9b25-4593-9bbf-7a68d01ee135.png">
+
+
+  </p>
+
 <h2>About</h2>
 <p> Aiven is a next-generation managed cloud service hosting for your software infrastructure services. Aiven takes the pain away from hosting databases and messaging services in the public cloud by offering automated, flexible and powerful solutions. Aiven’s services are easy and fast to setup, highly secure, highly automated, and have the widest regional coverage in the market.</p>
 
